@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三輪 胡音梨さんのキャリアマップ</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Yomogi&family=Zen+Kurenaido&display=swap');
+    
+    :root {
+      --fashion-1: #593C47;
+      --fashion-2: #F2E63D;
+      --fashion-3: #F2C53D;
+      --fashion-4: #F25C05;
+      --fashion-5: #F24405;
+      --text-main: #334155;
+      --heading: #1e40af;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Zen Kurenaido', sans-serif;
+      background-color: #f8f9fa;
+      color: var(--text-main);
+      line-height: 1.4;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    /* ヘッダースタイル */
+    .header {
+      background: linear-gradient(135deg, var(--fashion-1) 0%, var(--fashion-5) 100%);
+      padding: 25px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    
+    .header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C300,30 400,30 500,18 C650,0 700,20 800,15 C900,10 1000,15 1200,30 L1200,30 L0,30 Z' fill='white'/%3E%3C/svg%3E");
+      background-size: cover;
+    }
+    
+    .title-container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .title {
+      font-family: 'Kaisei Decol', serif;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      margin-bottom: 5px;
+      position: relative;
+    }
+    
+    .subtitle {
+      font-family: 'Yomogi', cursive;
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+    }
+    
+    .date {
+      font-family: 'Zen Kurenaido', sans-serif;
+      font-size: 14px;
+      color: white;
+      text-align: right;
+    }
+    
+    /* メインコンテンツ */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 25px;
+      position: relative;
+    }
+    
+    /* 左側カラム */
+    .column {
+      width: 33.33%;
+      padding: 15px;
+    }
+    
+    /* セクションスタイル */
+    .section {
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .section-title {
+      font-family: 'Kaisei Decol', serif;
+      font-size: 18px;
+      color: var(--heading);
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed var(--fashion-3);
+      display: flex;
+      align-items: center;
+    }
+    
+    .section-icon {
+      margin-right: 8px;
+      font-size: 22px;
+    }
+    
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card.glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .profile-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      border: 3px solid var(--fashion-3);
+    }
+    
+    /* 基本情報スタイル */
+    .info-item {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+    
+    .info-label {
+      font-weight: bold;
+      color: var(--fashion-1);
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    
+    .info-label::before {
+      content: "●";
+      color: var(--fashion-4);
+      margin-right: 5px;
+      font-size: 10px;
+    }
+    
+    .info-value {
+      flex: 1;
+    }
+    
+    /* PR セクション */
+    .pr-text {
+      position: relative;
+      padding: 15px 20px;
+      background-color: rgba(242, 230, 61, 0.1);
+      border-radius: 10px;
+      margin-top: 10px;
+      border-left: 3px solid var(--fashion-3);
+    }
+    
+    .pr-text p {
+      margin-bottom: 10px;
+    }
+    
+    .highlight {
+      background: linear-gradient(transparent 60%, var(--fashion-2) 60%);
+      font-weight: bold;
+    }
+    
+    /* 経歴セクション */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10px;
+      height: 100%;
+      width: 2px;
+      background: var(--fashion-3);
+      border-radius: 2px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 25px;
+    }
+    
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--fashion-4);
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--fashion-3);
+    }
+    
+    .timeline-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: var(--fashion-5);
+    }
+    
+    .timeline-content {
+      margin-bottom: 10px;
+    }
+    
+    /* スキルセクション */
+    .skill-item {
+      margin-bottom: 15px;
+    }
+    
+    .skill-name {
+      display: inline-block;
+      background-color: var(--fashion-1);
+      color: white;
+      padding: 3px 10px;
+      border-radius: 15px;
+      font-size: 14px;
+      margin-right: 8px;
+      margin-bottom: 5px;
+    }
+    
+    /* 手書き風装飾 */
+    .hand-drawn-box {
+      border: 2px solid var(--fashion-1);
+      border-radius: 15px;
+      padding: 15px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .hand-drawn-box::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-top: 2px solid var(--fashion-1);
+      border-left: 2px solid var(--fashion-1);
+      transform: rotate(45deg);
+    }
+    
+    .arrow {
+      position: relative;
+      width: 100%;
+      height: 30px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .arrow::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--fashion-4);
+      transform: translateY(-50%);
+    }
+    
+    .arrow::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid var(--fashion-4);
+      border-right: 2px solid var(--fashion-4);
+      transform: translateY(-50%) rotate(45deg);
+    }
+    
+    .bubble {
+      position: relative;
+      background: rgba(242, 196, 61, 0.2);
+      border-radius: 15px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .bubble::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      background: rgba(242, 196, 61, 0.2);
+      transform: rotate(45deg);
+    }
+    
+    /* フッター */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, var(--fashion-1) 0%, var(--fashion-5) 100%);
+      color: white;
+      font-size: 14px;
+      position: relative;
+    }
+    
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C300,0 400,0 500,12 C650,30 700,10 800,15 C900,20 1000,15 1200,0 L1200,0 L0,0 Z' fill='white'/%3E%3C/svg%3E");
+      background-size: cover;
+    }
+    
+    .doodle {
+      position: absolute;
+      opacity: 0.5;
+    }
+    
+    .doodle-1 {
+      top: 10%;
+      right: 5%;
+      transform: rotate(15deg);
+    }
+    
+    .doodle-2 {
+      bottom: 15%;
+      left: 3%;
+      transform: rotate(-10deg);
+    }
+    
+    /* キャリアパスセクション */
+    .career-path {
+      position: relative;
+      padding: 30px 0;
+    }
+    
+    .path-line {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background-color: var(--fashion-3);
+      transform: translateX(-50%);
+    }
+    
+    .path-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .path-dot {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: var(--fashion-4);
+      border: 5px solid white;
+      box-shadow: 0 0 0 3px var(--fashion-3);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    
+    .path-content {
+      width: 45%;
+      padding: 15px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    
+    .path-left {
+      margin-right: auto;
+    }
+    
+    .path-right {
+      margin-left: auto;
+    }
+    
+    .path-left::after,
+    .path-right::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    
+    .path-left::after {
+      right: -7px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      border-right: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .path-right::after {
+      left: -7px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      border-left: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .path-year {
+      font-family: 'Kaisei Decol', serif;
+      font-weight: bold;
+      color: var(--fashion-5);
+      margin-bottom: 5px;
+    }
+    
+    .path-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .path-desc {
+      font-size: 14px;
+    }
+    
+    .strength-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    .strength-item {
+      background-color: rgba(242, 196, 61, 0.2);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: var(--fashion-1);
+      display: flex;
+      align-items: center;
+    }
+    
+    .strength-item::before {
+      content: "✓";
+      margin-right: 5px;
+      color: var(--fashion-4);
+      font-weight: bold;
+    }
+    
+    /* 縦のタイムラインバージョン */
+    .vertical-timeline {
+      position: relative;
+      padding-left: 30px;
+      margin-top: 20px;
+    }
+    
+    .vertical-timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15px;
+      height: 100%;
+      width: 2px;
+      background: var(--fashion-3);
+    }
+    
+    .vertical-timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .vertical-timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--fashion-4);
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--fashion-3);
+    }
+    
+    .vertical-timeline-year {
+      font-weight: bold;
+      color: var(--fashion-5);
+      margin-bottom: 5px;
+    }
+    
+    .vertical-timeline-content {
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      border-left: 3px solid var(--fashion-3);
+    }
+    
+    .label-pill {
+      display: inline-block;
+      background-color: var(--fashion-3);
+      color: var(--fashion-1);
+      padding: 3px 10px;
+      border-radius: 15px;
+      font-size: 12px;
+      margin-right: 8px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <div class="header">
+      <div class="title-container">
+        <h1 class="title">三輪 胡音梨さんのキャリアマップ</h1>
+        <p class="subtitle">グラフィックデザインから航空機部品品質評価へ、そして未来へ</p>
+      </div>
+      <div class="date">2025年3月21日作成</div>
+    </div>
+    
+    <!-- メインコンテンツ -->
+    <div class="content">
+      <!-- 左カラム：基本情報 -->
+      <div class="column">
+        <div class="section">
+          <h2 class="section-title"><span class="section-icon">👤</span>プロフィール</h2>
+          <div class="card">
+            <img src="/api/placeholder/400/320" alt="三輪 胡音梨さんプロフィール画像" class="profile-img">
+            <div class="info-item">
+              <div class="info-label">氏名</div>
+              <div class="info-value">三輪 胡音梨（ミワ コトリ）</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">専門分野</div>
+              <div class="info-value">グラフィックデザイン</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">最終学歴</div>
+              <div class="info-value">嵯峨美術短期大学 グラフィックデザイン学科<br>（2021年3月卒業）</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">勤務条件</div>
+              <div class="info-value">条件付き転勤可（関東または東海）</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">最寄駅</div>
+              <div class="info-value">半田駅</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">趣味・特技</div>
+              <div class="info-value">絵を描くこと<br>（美術系学科卒で専門的知識・高い技術あり）</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section">
+          <h2 class="section-title"><span class="section-icon">💪</span>強み・スキル</h2>
+          <div class="card">
+            <div class="strength-area">
+              <div class="strength-item">コミュニケーション能力</div>
+              <div class="strength-item">意図をくみ取る力</div>
+              <div class="strength-item">精密な観察眼</div>
+              <div class="strength-item">ミリ単位の違いを見抜く力</div>
+              <div class="strength-item">美術的センス</div>
+              <div class="strength-item">報告書作成能力</div>
+              <div class="strength-item">高い集中力</div>
+              <div class="strength-item">精密測定技術</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 中央カラム：自己PR・ストーリー -->
+      <div class="column">
+        <div class="section">
+          <h2 class="section-title"><span class="section-icon">📝</span>自己PR</h2>
+          <div class="card">
+            <div class="pr-text">
+              <p>「<span class="highlight">話す・聞く・報告する</span>」は、どの職業でも欠かせない要素だと考えており、私は特にコミュニケーション能力に自信があります。</p>
+              <p>経験はまだ浅いですが、異業種での業務を通して培った「<span class="highlight">相手の意図を正確にくみ取り、適切に伝える力</span>」を活かし、チームの中でも円滑な連携を図ることができています。</p>
+              <p>現在従事している品質評価業務では、製造現場での不具合報告書や検査帳票を「<span class="highlight">見やすく、分かりやすい</span>」形でまとめることが評価され、レスポンスのスピード向上にも貢献しています。</p>
+              <p>また、学生時代から美術分野に力を入れており、「<span class="highlight">見る力</span>」を磨いてきました。その力は現在の仕事でも活かされており、ミリ単位以下のズレに気づくなど、精密さが求められる品質検査業務において高く評価されています。</p>
+              <p>感性を活かして集中力を保ちながら業務に取り組む姿勢は、今後さらに磨いていきたいと考えています。</p>
+              <p>将来的には、自分自身が発信源となり、「<span class="highlight">自分にしかできない仕事</span>」に取り組めるエンジニアを目指しています。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section">
+          <h2 class="section-title"><span class="section-icon">🗓️</span>キャリアの軌跡</h2>
+          <div class="vertical-timeline">
+            <div class="vertical-timeline-item">
+              <div class="vertical-timeline-year">2021年3月</div>
+              <div class="vertical-timeline-content">
+                <span class="label-pill">学歴</span>
+                嵯峨美術短期大学 グラフィックデザイン学科 卒業
+              </div>
+            </div>
+            <div class="vertical-timeline-item">
+              <div class="vertical-timeline-year">2021年4月〜現在</div>
+              <div class="vertical-timeline-content">
+                <span class="label-pill">職歴</span>
+                航空機部品製造会社にて品質評価業務<br>
+                ボーイング777の部品製造における品質保証を担当
+              </div>
+            </div>
+            <div class="vertical-timeline-item">
+              <div class="vertical-timeline-year">現在〜</div>
+              <div class="vertical-timeline-content">
+                <span class="label-pill">成長中</span>
+                品質評価のスキルを磨きながら、自分の強みを活かせるキャリアを模索中
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 右カラム：業務経歴・将来像 -->
+      <div class="column">
+        <div class="section">
+          <h2 class="section-title"><span class="section-icon">📊</span>業務経歴</h2>
+          <div class="hand-drawn-box">
+            <h3 style="color: var(--fashion-5); margin-bottom: 10px;">【プロジェクト概要】</h3>
+            <p>ボーイング777の製造業務における品質評価業務に従事。最終的な組立前検査や、不合格品が紛れ込んでいないかの確認を通じて、航空機部品の高精度な品質保証を担当。</p>
+            
+            <div style="margin-top: 15px;">
+              <h4 style="color: var(--fashion-4); margin-bottom: 5px;">【担当業務】</h4>
+              <ul style="list-style-type: none; padding-left: 15px;">
+                <li style="margin-bottom: 5px;">✓ 役割：メンバー</li>
+                <li>✓ 工程：評価、検査、品質確認、帳票作成</li>
+              </ul>
+            </div>
+            
+            <div style="margin-top: 15px;">
+              <h4 style="color: var(--fashion-4); margin-bottom: 5px;">【業務詳細】</h4>
+              <ul style="list-style-type: none; padding-left: 15px;">
+                <li style="margin-bottom: 5px;">✓ 三次元測定機を用いた部品の精密測定・評価</li>
+                <li style="margin-bottom: 5px;">✓ 組立直前の製品に対する最終検査業務</li>
+                <li style="margin-bottom: 5px;">✓ ミリ単位以下のわずかなズレの発見と記録</li>
+                <li style="margin-bottom: 5px;">✓ 不合格品の選別および救済措置に関する書類作成</li>
+                <li style="margin-bottom: 5px;">✓ 品質に関する各種帳票・報告書作成</li>
+                <li style="margin-bottom: 5px;">✓ 出荷前検査で不要部品の付着を発見</li>
+                <li>✓ 美術で培った観察眼を活かした品質確保</li>
+              </ul>
+            </div>
+            
+            <div style="margin-top: 15px;">
+              <h4 style="color: var(--fashion-4); margin-bottom: 5px;">【実績】</h4>
+              <ul style="list-style-type: none; padding-left: 15px;">
+                <li style="margin-bottom: 5px;">🏆 出荷間際に不要部品の付着を発見し、重大な品質トラブルを未然に防止</li>
+                <li style="margin-bottom: 5px;">🏆 見やすい帳票作成により、現場でのレスポンス向上を実現</li>
+                <li>🏆 観察力を活かし、チーム内でも高精度な評価業務に貢献</li>
+              </ul>
+            </div>
+            
+            <div style="margin-top: 15px;">
+              <h4 style="color: var(--fashion-4); margin-bottom: 5px;">【使用ツール】</h4>
+              <ul style="list-style-type: none; padding-left: 15px;">
+                <li style="margin-bottom: 5px;">🔧 三次元測定機</li>
+                <li style="margin-bottom: 5px;">🔧 Excel</li>
+                <li>🔧 PowerPoint</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section">
+          <h2 class="section-title"><span class="section-icon">🚀</span>キャリアビジョン</h2>
+          <div class="bubble">
+            <h3 style="color: var(--fashion-5); margin-bottom: 10px; text-align: center;">将来のキャリアパス</h3>
+            <p style="text-align: center; margin-bottom: 10px;">📍 現在地: 品質評価スペシャリスト</p>
+            <div class="arrow"></div>
+            <p style="text-align: center; margin-bottom: 10px; font-weight: bold;">短期目標 (1-2年)</p>
+            <p style="text-align: center; margin-bottom: 15px;">品質管理の専門性を高める<br>グラフィックスキルを活かした帳票改善</p>
+            <div class="arrow"></div>
+            <p style="text-align: center; margin-bottom: 10px; font-weight: bold;">中期目標 (3-5年)</p>
+            <p style="text-align: center; margin-bottom: 15px;">品質管理と視覚デザインを融合した<br>新しい検査・報告システムの構築</p>
+            <div class="arrow"></div>
+            <p style="text-align: center; font-weight: bold;">長期目標</p>
+            <p style="text-align: center;">「自分にしかできない仕事」を創出する<br>クリエイティブエンジニアへ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- フッター -->
+    <div class="footer">
+      <p>三輪 胡音梨さんのキャリアマップ | 作成日: 2025年3月21日</p>
+    </div>
+  
